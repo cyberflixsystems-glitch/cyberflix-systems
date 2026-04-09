@@ -61,7 +61,7 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 40%, #0a2040 0%, var(--bg) 70%);
+      background: radial-gradient(ellipse at 50% 40%, #0a2040 0%, var(--bg) 70%); background-image: url("img-shop-products.jpg"); background-size: cover; background-position: center; background-blend-mode: overlay;
     }
     .hero-grid {
       position: absolute; inset: 0;
@@ -341,30 +341,43 @@
     <p class="section-sub">Premium components and complete builds — configured for performance, reliability, and value.</p>
 
     <div class="product-tabs">
-      <button class="tab-btn active" onclick="showTab('rigs', this)">Complete Rigs</button>
-      <button class="tab-btn" onclick="showTab('motherboards', this)">Motherboards</button>
-      <button class="tab-btn" onclick="showTab('gpu', this)">Graphics Cards</button>
-      <button class="tab-btn" onclick="showTab('ram', this)">RAM</button>
-      <button class="tab-btn" onclick="showTab('wifi', this)">WiFi Cards</button>
+      <button class="tab-btn active" onclick="showTab('rigs',this)">Complete Rigs</button>
+      <button class="tab-btn" onclick="showTab('motherboards',this)">Motherboards</button>
+      <button class="tab-btn" onclick="showTab('gpu',this)">Graphics Cards</button>
+      <button class="tab-btn" onclick="showTab('ram',this)">RAM</button>
+      <button class="tab-btn" onclick="showTab('cabinets',this)">Cabinets</button>
+      <button class="tab-btn" onclick="showTab('monitors',this)">Monitors</button>
+      <button class="tab-btn" onclick="showTab('cooling',this)">Cooling</button>
+      <button class="tab-btn" onclick="showTab('storage',this)">Storage</button>
+      <button class="tab-btn" onclick="showTab('wifi',this)">WiFi Cards</button>
     </div>
 
-    <!-- RIGS -->
+    <!-- COMPLETE RIGS -->
     <div id="tab-rigs" class="tab-content active">
       <div class="rig-card">
         <div class="rig-badge">Gaming</div>
-        <div class="rig-img-placeholder" style="background:linear-gradient(135deg,#0a1a30,#0d2a1a);">🎮</div>
+        <img src="img-rtx5070.jpg" alt="Gaming PC" style="width:100%;height:200px;object-fit:cover;display:block;">
         <div class="rig-body">
           <div class="rig-name">Gaming Beast</div>
-          <div class="rig-specs">NVIDIA RTX 4070 · Intel i7-13700K<br/>32GB DDR5 · 1TB NVMe · RGB Build</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ASUS_Logo.svg/200px-ASUS_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">RTX 5070 · Intel i7-14700K<br/>32GB DDR5 · 1TB NVMe · RGB Build</div>
           <div class="rig-price">Starting ₹85,000</div>
           <a href="https://wa.me/919588669350?text=Hi, I am interested in the Gaming PC build" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
       <div class="rig-card">
         <div class="rig-badge">Trading</div>
-        <div class="rig-img-placeholder" style="background:linear-gradient(135deg,#0a1a30,#1a1a0a);">📈</div>
+        <img src="img-build-green.jpg" alt="Trading PC" style="width:100%;height:200px;object-fit:cover;display:block;">
         <div class="rig-body">
           <div class="rig-name">Trading Pro</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/MSI_Logo.svg/200px-MSI_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
           <div class="rig-specs">Intel i7-13700 · 64GB DDR4<br/>Dual Monitor Ready · Fast NVMe SSD</div>
           <div class="rig-price">Starting ₹75,000</div>
           <a href="https://wa.me/919588669350?text=Hi, I am interested in the Trading PC build" class="product-cta" target="_blank">Get Quote</a>
@@ -372,20 +385,28 @@
       </div>
       <div class="rig-card">
         <div class="rig-badge">Office</div>
-        <div class="rig-img-placeholder" style="background:linear-gradient(135deg,#0a1530,#0a2030);">🏢</div>
+        <img src="img-cpu-install.jpg" alt="Office PC" style="width:100%;height:200px;object-fit:cover;display:block;">
         <div class="rig-body">
           <div class="rig-name">Office Rig</div>
-          <div class="rig-specs">Intel i5 · 16GB RAM · 512GB SSD<br/>Silent, Energy Efficient · Win 11 Pro</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Gigabyte_logo_2020.svg/200px-Gigabyte_logo_2020.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">Intel i5 · 16GB RAM · 512GB SSD<br/>Silent · Energy Efficient · Win 11 Pro</div>
           <div class="rig-price">Starting ₹35,000</div>
           <a href="https://wa.me/919588669350?text=Hi, I am interested in the Office PC build" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
       <div class="rig-card">
         <div class="rig-badge">Workstation</div>
-        <div class="rig-img-placeholder" style="background:linear-gradient(135deg,#1a0a30,#0a1a30);">⚡</div>
+        <img src="img-gpu-stock.jpg" alt="Workstation" style="width:100%;height:200px;object-fit:cover;display:block;">
         <div class="rig-body">
           <div class="rig-name">Creator Workstation</div>
-          <div class="rig-specs">AMD Threadripper · RTX 4080<br/>128GB ECC RAM · Content & Rendering</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">AMD Ryzen 9 · RTX 4080<br/>128GB ECC RAM · Content & Rendering</div>
           <div class="rig-price">Starting ₹1,20,000</div>
           <a href="https://wa.me/919588669350?text=Hi, I am interested in the Workstation build" class="product-cta" target="_blank">Get Quote</a>
         </div>
@@ -395,7 +416,7 @@
     <!-- MOTHERBOARDS -->
     <div id="tab-motherboards" class="tab-content">
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0d1a2a,#0a2a1a);">🖥️</div>
+        <img src="https://dlcdnwebimgs.asus.com/files/media/be68e214-8479-45d1-8f74-fa6b91b2d6b7/v1/img/kv/kv.png" alt="ASUS ROG STRIX" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
         <div class="product-body">
           <div class="product-brand">ASUS ROG</div>
           <div class="product-name">ROG STRIX Z790-E Gaming WiFi</div>
@@ -405,7 +426,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#1a0d2a,#0a1a2a);">🖥️</div>
+        <img src="https://asset.msi.com/resize/image/global/product/product_16800685947f979a8d44a37741ef8a85f3f79e2d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="MSI MAG Z790" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
         <div class="product-body">
           <div class="product-brand">MSI MAG</div>
           <div class="product-name">MAG Z790 Tomahawk WiFi</div>
@@ -415,7 +436,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0a2a1a,#0d1a2a);">🖥️</div>
+        <img src="https://static.gigabyte.com/StaticFile/Image/Global/36ae4cd4e3c7f9e6b3f04e23674feec6/Product/28401/png/1000" alt="Gigabyte AORUS" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
         <div class="product-body">
           <div class="product-brand">Gigabyte AORUS</div>
           <div class="product-name">AORUS Elite AX Z790</div>
@@ -424,24 +445,44 @@
           <a href="https://wa.me/919588669350?text=Enquiry: Gigabyte AORUS Elite Z790" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
+      <div class="product-card">
+        <img src="img-motherboards.jpg" alt="MSI B550M Pro" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">MSI PRO</div>
+          <div class="product-name">B550M Pro-VDH WiFi</div>
+          <div class="product-spec">AM4 · DDR4 · PCIe 4.0 · WiFi</div>
+          <div class="product-price">₹9,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: MSI B550M Pro-VDH WiFi" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
     </div>
 
-    <!-- GPU -->
+    <!-- GRAPHICS CARDS -->
     <div id="tab-gpu" class="tab-content">
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#1a1a0a,#0a1a2a);">🎮</div>
+        <img src="img-rtx5070.jpg" alt="RTX 5070" style="width:100%;height:180px;object-fit:cover;display:block;">
         <div class="product-body">
-          <div class="product-brand">NVIDIA</div>
-          <div class="product-name">GeForce RTX 4070 12GB</div>
-          <div class="product-spec">DLSS 3 · 12GB GDDR6X · 1080p/1440p</div>
-          <div class="product-price">₹52,000</div>
-          <a href="https://wa.me/919588669350?text=Enquiry: RTX 4070" class="product-cta" target="_blank">Get Quote</a>
+          <div class="product-brand">NVIDIA · PNY</div>
+          <div class="product-name">GeForce RTX 5070 12GB</div>
+          <div class="product-spec">DLSS 4 · 12GB GDDR7 · Latest Gen</div>
+          <div class="product-price">₹65,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: RTX 5070" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0a1a2a,#1a0a2a);">🎮</div>
+        <img src="img-gpu-stock.jpg" alt="AMD Radeon RX 6500 XT" style="width:100%;height:180px;object-fit:cover;display:block;">
         <div class="product-body">
-          <div class="product-brand">NVIDIA</div>
+          <div class="product-brand">AMD · Sapphire</div>
+          <div class="product-name">Radeon RX 6500 XT 8GB</div>
+          <div class="product-spec">RDNA 2 · 8GB GDDR6 · PCIe 4.0</div>
+          <div class="product-price">₹18,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: RX 6500 XT" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zotac.com/download/files/styles/product_512x512/public/products/5Dqf5NBBV2FZ5gm5hAyJVCHSvGNr7VuS.png" alt="RTX 4080" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
+        <div class="product-body">
+          <div class="product-brand">NVIDIA · Zotac</div>
           <div class="product-name">GeForce RTX 4080 16GB</div>
           <div class="product-spec">DLSS 3 · 16GB GDDR6X · 4K Ready</div>
           <div class="product-price">₹95,000</div>
@@ -449,13 +490,13 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#1a0a0a,#0a1a2a);">🎮</div>
+        <img src="https://www.colorful.cn/uploadfile/product/2023/20230620171832.png" alt="Colorful GT730" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
         <div class="product-body">
-          <div class="product-brand">AMD</div>
-          <div class="product-name">Radeon RX 7900 XT 20GB</div>
-          <div class="product-spec">FSR 3 · 20GB GDDR6 · 4K Gaming</div>
-          <div class="product-price">₹72,000</div>
-          <a href="https://wa.me/919588669350?text=Enquiry: RX 7900 XT" class="product-cta" target="_blank">Get Quote</a>
+          <div class="product-brand">Colorful</div>
+          <div class="product-name">GeForce GT 730 4GB</div>
+          <div class="product-spec">Entry Level · HDMI · Office & Display</div>
+          <div class="product-price">₹4,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: GT 730" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
     </div>
@@ -463,7 +504,7 @@
     <!-- RAM -->
     <div id="tab-ram" class="tab-content">
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0a1a2a,#0a2a1a);">💾</div>
+        <img src="https://www.corsair.com/medias/sys_master/images/images/h45/h16/9065537380382/CMK32GX5M2B6000C36-Gallery-RGB-Default-01/CMK32GX5M2B6000C36-Gallery-RGB-Default-01.png" alt="Corsair Vengeance" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
         <div class="product-body">
           <div class="product-brand">Corsair</div>
           <div class="product-name">Vengeance DDR5 32GB</div>
@@ -473,7 +514,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#1a0a2a,#0a1a2a);">💾</div>
+        <img src="https://www.gskill.com/img/pro/F5-6000J3038F16GX2-TZ5RK-600.jpg" alt="G.Skill Trident Z5" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-cpu-stock.jpg';this.style.objectFit='cover'">
         <div class="product-body">
           <div class="product-brand">G.Skill</div>
           <div class="product-name">Trident Z5 RGB 32GB</div>
@@ -483,13 +524,189 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0a2a1a,#1a0a2a);">💾</div>
+        <img src="https://www.kingston.com/dataSheets/KF556C40BB-32_en.jpg" alt="Kingston Fury" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-amd-ryzen.jpg';this.style.objectFit='cover'">
         <div class="product-body">
           <div class="product-brand">Kingston</div>
           <div class="product-name">Fury Beast DDR5 32GB</div>
-          <div class="product-spec">2×16GB · 5200MHz · CL40 · Black</div>
+          <div class="product-spec">2×16GB · 5200MHz · CL40</div>
           <div class="product-price">₹8,000</div>
           <a href="https://wa.me/919588669350?text=Enquiry: Kingston Fury Beast DDR5" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="EVM DDR4" style="width:100%;height:180px;object-fit:cover;display:block;object-position:right bottom;">
+        <div class="product-body">
+          <div class="product-brand">EVM</div>
+          <div class="product-name">DDR4 8GB / 16GB</div>
+          <div class="product-spec">3200MHz · Budget · Office & Home</div>
+          <div class="product-price">From ₹1,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: EVM DDR4 RAM" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CABINETS -->
+    <div id="tab-cabinets" class="tab-content">
+      <div class="product-card">
+        <img src="https://www.lianli.com/wp-content/uploads/2022/09/O11DEvoRGB_B_02.png" alt="Lian Li O11 Dynamic" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Lian Li</div>
+          <div class="product-name">O11 Dynamic EVO RGB</div>
+          <div class="product-spec">Mid Tower · Tempered Glass · ATX/E-ATX</div>
+          <div class="product-price">₹14,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Lian Li O11 Dynamic EVO" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zebronics.com/wp-content/uploads/zeb-opus1-b.jpg" alt="Zebronics Cabinet" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Zebronics</div>
+          <div class="product-name">Zeb-Opus Gaming Cabinet</div>
+          <div class="product-spec">Mid Tower · RGB · Tempered Glass · ATX</div>
+          <div class="product-price">₹3,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Zebronics Opus Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/d91a3893-9aab-4cc9-be02-cbee4dd61e48/v1/img/kv/kv.png" alt="ASUS TUF Gaming Case" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS TUF</div>
+          <div class="product-name">TUF Gaming GT501 Case</div>
+          <div class="product-spec">Full Tower · ARGB · E-ATX Support</div>
+          <div class="product-price">₹8,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS TUF GT501 Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="Antec Cabinet" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">Antec / Ant Esports</div>
+          <div class="product-name">ICE-Series Gaming Cabinet</div>
+          <div class="product-spec">Mid Tower · RGB Fans · Mesh Front</div>
+          <div class="product-price">From ₹2,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Ant Esports Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONITORS -->
+    <div id="tab-monitors" class="tab-content">
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/40dc0283-e9e6-4ce8-956c-4c3aef6e43f3/v1/img/kv/kv.png" alt="ASUS ROG Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS ROG</div>
+          <div class="product-name">ROG Swift 27" 165Hz IPS</div>
+          <div class="product-spec">27" · 1440p · 165Hz · 1ms · G-Sync</div>
+          <div class="product-price">₹28,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS ROG Swift Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://asset.msi.com/resize/image/global/product/product_1680068597b33cb6b2f77fb3c7f6baafb8c0eb4b.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="MSI Gaming Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">MSI</div>
+          <div class="product-name">Optix G27C6P 27" Curved</div>
+          <div class="product-spec">27" · FHD · 170Hz · VA Panel · FreeSync</div>
+          <div class="product-price">₹18,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: MSI Optix G27C6P Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.lg.com/us/images/monitors/md08003372/gallery/LG-Monitor-27UK850-W-Front-View-D-1.jpg" alt="LG 4K Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">LG</div>
+          <div class="product-name">UltraFine 27" 4K USB-C</div>
+          <div class="product-spec">27" · 4K UHD · IPS · USB-C · HDR400</div>
+          <div class="product-price">₹32,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: LG 4K Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zebronics.com/wp-content/uploads/ZEB-A24FHD-01.jpg" alt="Zebronics Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Zebronics</div>
+          <div class="product-name">ZEB-A24FHD 24" IPS</div>
+          <div class="product-spec">24" · FHD · 75Hz · IPS · HDMI</div>
+          <div class="product-price">₹7,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Zebronics 24 inch Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COOLING -->
+    <div id="tab-cooling" class="tab-content">
+      <div class="product-card">
+        <img src="img-liquid-cooler.jpg" alt="DeepCool LM360" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">DeepCool</div>
+          <div class="product-name">LM360 ARGB 360mm AIO</div>
+          <div class="product-spec">360mm · ARGB Fans · LCD Display · Anti-Leak</div>
+          <div class="product-price">₹8,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: DeepCool LM360" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-build-green.jpg" alt="Liquid Cooled Build" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">DeepCool</div>
+          <div class="product-name">AK620 Dual Tower Air Cooler</div>
+          <div class="product-spec">Dual Tower · 260W TDP · 120mm Fans</div>
+          <div class="product-price">₹4,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: DeepCool AK620" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/fc5e3bf1-fdb9-4f59-b797-1e4a9299765d/v1/img/kv/kv.png" alt="ASUS ROG Strix LC" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-liquid-cooler.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS ROG</div>
+          <div class="product-name">ROG Strix LC 360 ARGB</div>
+          <div class="product-spec">360mm · ARGB · ROG Ecosystem</div>
+          <div class="product-price">₹12,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS ROG Strix LC 360" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORAGE -->
+    <div id="tab-storage" class="tab-content">
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="Crucial SSD" style="width:100%;height:180px;object-fit:cover;display:block;object-position:bottom left;">
+        <div class="product-body">
+          <div class="product-brand">Crucial</div>
+          <div class="product-name">E100 480GB NVMe SSD</div>
+          <div class="product-spec">PCIe Gen4 · M.2 2280 · 4700MB/s</div>
+          <div class="product-price">₹3,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Crucial E100 SSD" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.samsung.com/us/computing/memory-storage/solid-state-drives/_searchresults/products/980-pro/980-pro-2tb/MZ-V8P2T0B-AM-gallery-1.jpg" alt="Samsung 980 Pro" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Samsung</div>
+          <div class="product-name">980 Pro 1TB NVMe</div>
+          <div class="product-spec">PCIe Gen4 · 7000MB/s · M.2</div>
+          <div class="product-price">₹7,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Samsung 980 Pro 1TB" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.seagate.com/content/dam/seagate/migrated-assets/www-content/product-content/barracuda-fam/barracuda/en-us/images/barracuda-hdd-top-angle-1200x630.jpg" alt="Seagate Barracuda HDD" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Seagate</div>
+          <div class="product-name">Barracuda 2TB HDD</div>
+          <div class="product-spec">3.5" · SATA · 7200RPM · 256MB Cache</div>
+          <div class="product-price">₹4,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Seagate Barracuda 2TB" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.colorfire.com/uploadfile/product/2023/20230915144501.jpg" alt="Colorfire SSD" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-gpu-stock.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Colorfire</div>
+          <div class="product-name">M.2 NVMe SSD 256GB</div>
+          <div class="product-spec">PCIe · M.2 · Fast Boot · Budget</div>
+          <div class="product-price">₹1,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Colorfire M.2 SSD" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
     </div>
@@ -497,31 +714,33 @@
     <!-- WIFI CARDS -->
     <div id="tab-wifi" class="tab-content">
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#0a1a2a,#0a2a2a);">📶</div>
+        <img src="https://static.tp-link.com/upload/product-overview/2022/202207/20220706/Archer_TX3000E(UN)_v2_1.0_Normal_1654591081558c.jpg" alt="TP-Link Archer TX3000E" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
         <div class="product-body">
           <div class="product-brand">TP-Link</div>
-          <div class="product-name">Archer TX3000E</div>
-          <div class="product-spec">WiFi 6 · AX3000 · Bluetooth 5.0 · PCIe</div>
+          <div class="product-name">Archer TX3000E WiFi 6</div>
+          <div class="product-spec">AX3000 · Bluetooth 5.0 · PCIe</div>
           <div class="product-price">₹3,200</div>
           <a href="https://wa.me/919588669350?text=Enquiry: TP-Link Archer TX3000E" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
       <div class="product-card">
-        <div class="product-img-placeholder" style="background:linear-gradient(135deg,#1a1a0a,#0a1a2a);">📶</div>
+        <img src="https://dlcdnwebimgs.asus.com/files/media/6e08e9a3-a6d3-44bf-90b3-e8a42fa89ece/v1/img/keyfeatures/kv.png" alt="ASUS PCE-AX58BT" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-motherboards.jpg';this.style.objectFit='cover'">
         <div class="product-body">
           <div class="product-brand">ASUS</div>
           <div class="product-name">PCE-AX58BT WiFi 6</div>
-          <div class="product-spec">AX3000 · Bluetooth 5.0 · MU-MIMO · PCIe</div>
+          <div class="product-spec">AX3000 · BT 5.0 · MU-MIMO · PCIe</div>
           <div class="product-price">₹4,500</div>
           <a href="https://wa.me/919588669350?text=Enquiry: ASUS PCE-AX58BT" class="product-cta" target="_blank">Get Quote</a>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- CONNECTIVITY -->
 <!-- CONNECTIVITY -->
 <section id="connectivity">
   <div class="container">
@@ -589,21 +808,94 @@
         </div>
       </div>
     </div>
-    <div class="partner-strip">
-      <span class="partner-label">Partners</span>
-      <span class="partner-pill">ACT Fibernet</span>
-      <span class="partner-pill">Airtel</span>
-      <span class="partner-pill">Jio Fiber</span>
-      <span class="partner-pill">Tata Play</span>
-      <span class="partner-pill">DishTV</span>
-      <span class="partner-pill">Sun Network</span>
-      <span class="partner-pill">Tata Sky Fiber</span>
+    <div class="partner-strip" style="align-items:center;">
+      <span class="partner-label">Our Partners</span>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://www.actcorp.in/images/act-logo.png" alt="ACT Fibernet" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#ff6b35;">ACT Fibernet</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Airtel_logo_2010.svg/200px-Airtel_logo_2010.svg.png" alt="Airtel" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#e40000;">Airtel</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Jio_logo.svg/200px-Jio_logo.svg.png" alt="Jio Fiber" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#0033a0;">Jio Fiber</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tata_Play_logo.svg/200px-Tata_Play_logo.svg.png" alt="Tata Play" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#00a3e0;">Tata Play</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Dish_TV_Logo.svg/200px-Dish_TV_Logo.svg.png" alt="DishTV" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#a78bfa;">DishTV</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:13px;font-weight:600;color:#f59e0b;">☀️ Sun Network</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
+
+<!-- GALLERY -->
+<section id="gallery" style="background:#060a10;">
+  <div class="container">
+    <div class="section-label">Real Stock. Real Builds.</div>
+    <div class="section-title">From Our Store</div>
+    <p class="section-sub">Genuine components, expert builds — straight from our Hinjewadi & Baner showrooms.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-rtx5070.jpg" alt="RTX 5070 Build" style="width:100%;height:240px;object-fit:cover;display:block;transition:transform 0.3s;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Latest Build</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">PNY GeForce RTX 5070 — Gaming Rig</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-build-green.jpg" alt="Custom Build Inside" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Custom Build</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">MSI + DeepCool Liquid Cooled System</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-motherboards.jpg" alt="Motherboard Stock" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">MSI, ASUS, Gigabyte Motherboards</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-cpu-stock.jpg" alt="Intel & AMD CPUs" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">Intel Core i3/i5/i7 & AMD Ryzen CPUs</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-gpu-stock.jpg" alt="GPU Stock" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">AMD Radeon RX 6500 XT & More GPUs</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-liquid-cooler.jpg" alt="Liquid Cooling" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Premium Cooling</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">DeepCool LM360 ARGB Liquid Cooler</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
 <!-- REVIEWS -->
 <section id="reviews" class="reviews-bg">
   <div class="container">
