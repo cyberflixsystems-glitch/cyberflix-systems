@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyberflix Systems LLP — Custom PCs, IT Infrastructure & Connectivity, Pune</title>
+  <meta name="description" content="Cyberflix Systems LLP — Custom PC builds, IT infrastructure, hardware, repairs, interactive panels, and channel partner connectivity solutions in Pune. Hinjewadi & Baner."/>
+  <link rel="icon" type="image/svg+xml" href="cyberflix-logo.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #060a10;
+      --bg2: #0d1520;
+      --bg3: #111c2a;
+      --cyan: #00d4ff;
+      --cyan2: #00bfdf;
+      --border: #1a2d42;
+      --text: #e0e8f0;
+      --muted: #4a7090;
+      --muted2: #6a8fa8;
+      --green: #25d366;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px;
+      background: rgba(6,10,16,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; align-items: baseline; }
+    .logo-cyber { font-family: 'Orbitron', monospace; font-size: 20px; font-weight: 900; color: var(--cyan); letter-spacing: 1px; }
+    .logo-flix  { font-family: 'Orbitron', monospace; font-size: 20px; font-weight: 900; color: #fff; letter-spacing: 1px; }
+    .logo-llp   { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-left: 8px; align-self: center; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted2); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta { background: transparent; border: 1px solid var(--cyan); color: var(--cyan); font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 8px 20px; border-radius: 4px; cursor: pointer; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .nav-cta:hover { background: var(--cyan); color: var(--bg); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--cyan); border-radius: 2px; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 40px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, #0a2040 0%, var(--bg) 70%); background-image: url("img-shop-products.jpg"); background-size: cover; background-position: center; background-blend-mode: overlay;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.25;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; border: 1px solid var(--border); padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Orbitron', monospace; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 span { color: var(--cyan); }
+    .hero p { font-size: 18px; color: var(--muted2); max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--cyan); color: var(--bg); font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; border-radius: 4px; border: none; cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-outline { background: transparent; color: var(--cyan); font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; border-radius: 4px; border: 1px solid var(--cyan); cursor: pointer; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--cyan); color: var(--bg); }
+    .hero-stats { display: flex; gap: 48px; justify-content: center; margin-top: 60px; flex-wrap: wrap; }
+    .stat-num { font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 700; color: var(--cyan); }
+    .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+
+    /* SECTIONS */
+    section { padding: 80px 40px; }
+    .section-label { font-size: 11px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; margin-bottom: 8px; }
+    .section-title { font-family: 'Orbitron', monospace; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .section-sub { font-size: 16px; color: var(--muted2); margin-bottom: 48px; max-width: 600px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .service-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 28px 22px; position: relative; overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--cyan); transform: scaleX(0); transition: transform 0.3s; }
+    .service-card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+    .service-title { font-family: 'Orbitron', monospace; font-size: 13px; color: #fff; letter-spacing: 1px; margin-bottom: 8px; }
+    .service-desc { font-size: 14px; color: var(--muted2); line-height: 1.5; }
+
+    /* PRODUCTS */
+    .products-bg { background: var(--bg2); }
+    .product-tabs { display: flex; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
+    .tab-btn { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 8px 20px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--muted2); cursor: pointer; transition: all 0.2s; }
+    .tab-btn.active, .tab-btn:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,212,255,0.06); }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .product-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; transition: border-color 0.25s, transform 0.25s;
+    }
+    .product-card:hover { border-color: var(--cyan); transform: translateY(-4px); box-shadow: 0 0 20px rgba(0,212,255,0.1); }
+    .product-img { width: 100%; height: 180px; object-fit: cover; background: var(--bg3); display: flex; align-items: center; justify-content: center; }
+    .product-img-placeholder { width: 100%; height: 180px; background: linear-gradient(135deg, #0d1a2a 0%, #0a2040 100%); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+    .product-body { padding: 18px; }
+    .product-brand { font-size: 10px; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; margin-bottom: 4px; }
+    .product-name { font-family: 'Orbitron', monospace; font-size: 12px; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+    .product-spec { font-size: 13px; color: var(--muted2); margin-bottom: 14px; }
+    .product-price { font-family: 'Orbitron', monospace; font-size: 16px; color: var(--cyan); margin-bottom: 12px; }
+    .product-cta { display: block; text-align: center; background: transparent; border: 1px solid var(--cyan); color: var(--cyan); font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 8px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .product-cta:hover { background: var(--cyan); color: var(--bg); }
+    .rig-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; transition: border-color 0.25s, transform 0.25s; position: relative;
+    }
+    .rig-card:hover { border-color: var(--cyan); transform: translateY(-4px); box-shadow: 0 0 24px rgba(0,212,255,0.12); }
+    .rig-badge { position: absolute; top: 12px; left: 12px; font-size: 10px; letter-spacing: 2px; color: var(--cyan); background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; z-index: 1; }
+    .rig-img-placeholder { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+    .rig-body { padding: 20px; }
+    .rig-name { font-family: 'Orbitron', monospace; font-size: 14px; color: #fff; margin-bottom: 8px; }
+    .rig-specs { font-size: 13px; color: var(--muted2); margin-bottom: 14px; line-height: 1.6; }
+    .rig-price { font-family: 'Orbitron', monospace; font-size: 18px; color: var(--cyan); margin-bottom: 14px; }
+
+    /* CONNECTIVITY */
+    .connectivity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 40px; }
+    .conn-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 22px 18px; transition: border-color 0.25s, transform 0.25s; position: relative;
+    }
+    .conn-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent, var(--cyan)); border-radius: 2px 2px 0 0; }
+    .conn-card:hover { border-color: var(--cyan); transform: translateY(-3px); }
+    .conn-icon { font-size: 26px; margin-bottom: 10px; display: block; }
+    .conn-title { font-family: 'Orbitron', monospace; font-size: 11px; color: #fff; letter-spacing: 1px; margin-bottom: 6px; }
+    .conn-desc { font-size: 13px; color: var(--muted2); line-height: 1.5; margin-bottom: 12px; }
+    .badge-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
+    .badge { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 4px; border: 1px solid; letter-spacing: 0.5px; }
+    .b-cyan  { color: var(--cyan);  border-color: rgba(0,212,255,0.3);  background: rgba(0,212,255,0.07);  }
+    .b-orange{ color: #ff6b35; border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.07); }
+    .b-blue  { color: #4aa8ff; border-color: rgba(74,168,255,0.3);  background: rgba(74,168,255,0.07);  }
+    .b-green { color: #4ade80; border-color: rgba(74,222,128,0.3);  background: rgba(74,222,128,0.07);  }
+    .b-purple{ color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.07); }
+    .b-yellow{ color: #f59e0b; border-color: rgba(245,158,11,0.3);  background: rgba(245,158,11,0.07);  }
+    .partner-strip { border-top: 1px solid var(--border); padding-top: 28px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .partner-label { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-right: 8px; }
+    .partner-pill { font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); color: var(--muted2); background: var(--bg2); }
+
+    /* REVIEWS */
+    .reviews-bg { background: var(--bg2); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 32px; }
+    .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
+    .review-stars { color: #f59e0b; font-size: 16px; margin-bottom: 12px; }
+    .review-text { font-size: 15px; color: var(--muted2); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .review-author { font-family: 'Orbitron', monospace; font-size: 11px; color: #fff; letter-spacing: 1px; }
+    .review-role { font-size: 12px; color: var(--muted); }
+    .rating-summary { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+    .rating-big { font-family: 'Orbitron', monospace; font-size: 48px; font-weight: 700; color: var(--cyan); }
+    .rating-info { font-size: 13px; color: var(--muted2); }
+    .rating-stars-big { font-size: 22px; color: #f59e0b; }
+
+    /* FOOTER */
+    footer { background: #040710; border-top: 1px solid var(--border); padding: 60px 40px 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; text-decoration: none; }
+    .footer-tagline { font-size: 14px; color: var(--muted2); line-height: 1.6; margin-bottom: 20px; }
+    .social-links { display: flex; gap: 12px; }
+    .social-btn { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .social-btn:hover { border-color: var(--cyan); background: rgba(0,212,255,0.08); }
+    .footer-col-title { font-family: 'Orbitron', monospace; font-size: 11px; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 14px; color: var(--muted2); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cyan); }
+    .branch-name { font-family: 'Orbitron', monospace; font-size: 11px; color: var(--cyan); letter-spacing: 1px; margin-bottom: 8px; }
+    .branch-addr { font-size: 13px; color: var(--muted2); line-height: 1.6; margin-bottom: 12px; }
+    .wa-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3); color: #25d366; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 6px; text-decoration: none; transition: background 0.2s; margin-bottom: 16px; }
+    .wa-btn:hover { background: rgba(37,211,102,0.2); }
+    .footer-bottom { border-top: 1px solid var(--border); padding: 20px 0; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: gap; }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-policy a { font-size: 13px; color: var(--muted); text-decoration: none; margin-left: 20px; }
+    .footer-policy a:hover { color: var(--cyan); }
+
+    /* FLOATING WHATSAPP */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: 10px; background: #25d366; color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; padding: 12px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+    .wa-float:hover { transform: scale(1.05); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .wa-icon { font-size: 20px; }
+
+    /* SECTION DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 0 40px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 60px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .hero-stats { gap: 28px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      footer { padding: 40px 20px 0; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+      .wa-float span { display: none; }
+      .wa-float { padding: 14px; border-radius: 50%; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .fade-up-2 { animation: fadeUp 0.6s ease 0.15s both; }
+    .fade-up-3 { animation: fadeUp 0.6s ease 0.3s both; }
+
+    /* TABS JS */
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo-wrap">
+    <svg width="38" height="38" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="160" height="160" fill="#060a10"/>
+      <polygon points="80,22 130,51 130,109 80,138 30,109 30,51" stroke="#1a8aaa" stroke-width="1.5" fill="none" opacity="0.85"/>
+      <line x1="80" y1="22" x2="80" y2="138" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+      <line x1="130" y1="51" x2="30" y2="109" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+      <line x1="130" y1="109" x2="30" y2="51" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+      <circle cx="80"  cy="22"  r="4" fill="#00bfdf"/>
+      <circle cx="130" cy="51"  r="4" fill="#00bfdf"/>
+      <circle cx="130" cy="109" r="4" fill="#00bfdf"/>
+      <circle cx="80"  cy="138" r="4" fill="#00bfdf"/>
+      <circle cx="30"  cy="109" r="4" fill="#00bfdf"/>
+      <circle cx="30"  cy="51"  r="4" fill="#00bfdf"/>
+      <path d="M 110 54 A 38 38 0 1 0 110 106" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <polygon points="108,72 108,88 122,80" fill="#00c8f0"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-cyber">Cyber</span><span class="logo-flix">flix</span>
+      <span class="logo-llp">Systems LLP</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#connectivity">Partners</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919588669350" class="nav-cta" target="_blank">Get Quote</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-up">Pune's Premier IT Systems Partner</div>
+    <h1 class="fade-up-2">Build Smarter.<br/><span>Power Everything.</span></h1>
+    <p class="fade-up-3">Custom PC builds, IT infrastructure, hardware sales, repairs, interactive panels & enterprise connectivity solutions — from Hinjewadi to the world.</p>
+    <div class="hero-btns fade-up-3">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="https://wa.me/919588669350" class="btn-outline" target="_blank">WhatsApp Us</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">500+</div><div class="stat-label">Builds Delivered</div></div>
+      <div><div class="stat-num">8+</div><div class="stat-label">Years Experience</div></div>
+      <div><div class="stat-num">2</div><div class="stat-label">Pune Locations</div></div>
+      <div><div class="stat-num">4.9★</div><div class="stat-label">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Our Services</div>
+    <p class="section-sub">End-to-end technology solutions for individuals, gamers, and enterprises across Pune.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🖥️</span>
+        <div class="service-title">Custom PC Builds</div>
+        <div class="service-desc">Gaming rigs, trading setups, workstations & office PCs — built to your exact specs.</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <div class="service-title">Repairs & AMC</div>
+        <div class="service-desc">Hardware diagnosis, component replacement, and annual maintenance contracts.</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏗️</span>
+        <div class="service-title">IT Infrastructure</div>
+        <div class="service-desc">Server setup, networking, structured cabling, and enterprise IT deployments.</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📺</span>
+        <div class="service-title">Interactive Panels</div>
+        <div class="service-desc">Smart boards, digital signage, and interactive displays for corporates and schools.</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📦</span>
+        <div class="service-title">Hardware Sales</div>
+        <div class="service-desc">Genuine components — CPUs, GPUs, RAM, storage, peripherals and more.</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📡</span>
+        <div class="service-title">WiFi & Networking</div>
+        <div class="service-desc">Mesh networks, router setup, office WiFi infrastructure and network optimization.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRODUCTS -->
+<section id="products" class="products-bg">
+  <div class="container">
+    <div class="section-label">Build Your Rig</div>
+    <div class="section-title">Featured Products</div>
+    <p class="section-sub">Premium components and complete builds — configured for performance, reliability, and value.</p>
+
+    <div class="product-tabs">
+      <button class="tab-btn active" onclick="showTab('rigs',this)">Complete Rigs</button>
+      <button class="tab-btn" onclick="showTab('motherboards',this)">Motherboards</button>
+      <button class="tab-btn" onclick="showTab('gpu',this)">Graphics Cards</button>
+      <button class="tab-btn" onclick="showTab('ram',this)">RAM</button>
+      <button class="tab-btn" onclick="showTab('cabinets',this)">Cabinets</button>
+      <button class="tab-btn" onclick="showTab('monitors',this)">Monitors</button>
+      <button class="tab-btn" onclick="showTab('cooling',this)">Cooling</button>
+      <button class="tab-btn" onclick="showTab('storage',this)">Storage</button>
+      <button class="tab-btn" onclick="showTab('wifi',this)">WiFi Cards</button>
+    </div>
+
+    <!-- COMPLETE RIGS -->
+    <div id="tab-rigs" class="tab-content active">
+      <div class="rig-card">
+        <div class="rig-badge">Gaming</div>
+        <img src="img-rtx5070.jpg" alt="Gaming PC" style="width:100%;height:200px;object-fit:cover;display:block;">
+        <div class="rig-body">
+          <div class="rig-name">Gaming Beast</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ASUS_Logo.svg/200px-ASUS_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">RTX 5070 · Intel i7-14700K<br/>32GB DDR5 · 1TB NVMe · RGB Build</div>
+          <div class="rig-price">Starting ₹85,000</div>
+          <a href="https://wa.me/919588669350?text=Hi, I am interested in the Gaming PC build" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="rig-card">
+        <div class="rig-badge">Trading</div>
+        <img src="img-build-green.jpg" alt="Trading PC" style="width:100%;height:200px;object-fit:cover;display:block;">
+        <div class="rig-body">
+          <div class="rig-name">Trading Pro</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/MSI_Logo.svg/200px-MSI_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">Intel i7-13700 · 64GB DDR4<br/>Dual Monitor Ready · Fast NVMe SSD</div>
+          <div class="rig-price">Starting ₹75,000</div>
+          <a href="https://wa.me/919588669350?text=Hi, I am interested in the Trading PC build" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="rig-card">
+        <div class="rig-badge">Office</div>
+        <img src="img-cpu-install.jpg" alt="Office PC" style="width:100%;height:200px;object-fit:cover;display:block;">
+        <div class="rig-body">
+          <div class="rig-name">Office Rig</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Intel_logo_%282006-2020%29.svg/200px-Intel_logo_%282006-2020%29.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Gigabyte_logo_2020.svg/200px-Gigabyte_logo_2020.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">Intel i5 · 16GB RAM · 512GB SSD<br/>Silent · Energy Efficient · Win 11 Pro</div>
+          <div class="rig-price">Starting ₹35,000</div>
+          <a href="https://wa.me/919588669350?text=Hi, I am interested in the Office PC build" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="rig-card">
+        <div class="rig-badge">Workstation</div>
+        <img src="img-gpu-stock.jpg" alt="Workstation" style="width:100%;height:200px;object-fit:cover;display:block;">
+        <div class="rig-body">
+          <div class="rig-name">Creator Workstation</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" style="height:14px;object-fit:contain;filter:brightness(0)invert(1);opacity:0.7;">
+          </div>
+          <div class="rig-specs">AMD Ryzen 9 · RTX 4080<br/>128GB ECC RAM · Content & Rendering</div>
+          <div class="rig-price">Starting ₹1,20,000</div>
+          <a href="https://wa.me/919588669350?text=Hi, I am interested in the Workstation build" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOTHERBOARDS -->
+    <div id="tab-motherboards" class="tab-content">
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/be68e214-8479-45d1-8f74-fa6b91b2d6b7/v1/img/kv/kv.png" alt="ASUS ROG STRIX" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
+        <div class="product-body">
+          <div class="product-brand">ASUS ROG</div>
+          <div class="product-name">ROG STRIX Z790-E Gaming WiFi</div>
+          <div class="product-spec">LGA1700 · DDR5 · PCIe 5.0 · WiFi 6E</div>
+          <div class="product-price">₹42,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS ROG STRIX Z790-E" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://asset.msi.com/resize/image/global/product/product_16800685947f979a8d44a37741ef8a85f3f79e2d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="MSI MAG Z790" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
+        <div class="product-body">
+          <div class="product-brand">MSI MAG</div>
+          <div class="product-name">MAG Z790 Tomahawk WiFi</div>
+          <div class="product-spec">LGA1700 · DDR5 · PCIe 5.0 · 2.5G LAN</div>
+          <div class="product-price">₹28,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: MSI MAG Z790 Tomahawk" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://static.gigabyte.com/StaticFile/Image/Global/36ae4cd4e3c7f9e6b3f04e23674feec6/Product/28401/png/1000" alt="Gigabyte AORUS" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
+        <div class="product-body">
+          <div class="product-brand">Gigabyte AORUS</div>
+          <div class="product-name">AORUS Elite AX Z790</div>
+          <div class="product-spec">LGA1700 · DDR5 · PCIe 5.0 · WiFi 6E</div>
+          <div class="product-price">₹24,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Gigabyte AORUS Elite Z790" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-motherboards.jpg" alt="MSI B550M Pro" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">MSI PRO</div>
+          <div class="product-name">B550M Pro-VDH WiFi</div>
+          <div class="product-spec">AM4 · DDR4 · PCIe 4.0 · WiFi</div>
+          <div class="product-price">₹9,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: MSI B550M Pro-VDH WiFi" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAPHICS CARDS -->
+    <div id="tab-gpu" class="tab-content">
+      <div class="product-card">
+        <img src="img-rtx5070.jpg" alt="RTX 5070" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">NVIDIA · PNY</div>
+          <div class="product-name">GeForce RTX 5070 12GB</div>
+          <div class="product-spec">DLSS 4 · 12GB GDDR7 · Latest Gen</div>
+          <div class="product-price">₹65,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: RTX 5070" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-gpu-stock.jpg" alt="AMD Radeon RX 6500 XT" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">AMD · Sapphire</div>
+          <div class="product-name">Radeon RX 6500 XT 8GB</div>
+          <div class="product-spec">RDNA 2 · 8GB GDDR6 · PCIe 4.0</div>
+          <div class="product-price">₹18,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: RX 6500 XT" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zotac.com/download/files/styles/product_512x512/public/products/5Dqf5NBBV2FZ5gm5hAyJVCHSvGNr7VuS.png" alt="RTX 4080" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;">
+        <div class="product-body">
+          <div class="product-brand">NVIDIA · Zotac</div>
+          <div class="product-name">GeForce RTX 4080 16GB</div>
+          <div class="product-spec">DLSS 3 · 16GB GDDR6X · 4K Ready</div>
+          <div class="product-price">₹95,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: RTX 4080" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.colorful.cn/uploadfile/product/2023/20230620171832.png" alt="Colorful GT730" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Colorful</div>
+          <div class="product-name">GeForce GT 730 4GB</div>
+          <div class="product-spec">Entry Level · HDMI · Office & Display</div>
+          <div class="product-price">₹4,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: GT 730" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAM -->
+    <div id="tab-ram" class="tab-content">
+      <div class="product-card">
+        <img src="https://www.corsair.com/medias/sys_master/images/images/h45/h16/9065537380382/CMK32GX5M2B6000C36-Gallery-RGB-Default-01/CMK32GX5M2B6000C36-Gallery-RGB-Default-01.png" alt="Corsair Vengeance" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Corsair</div>
+          <div class="product-name">Vengeance DDR5 32GB</div>
+          <div class="product-spec">2×16GB · 5600MHz · CL36 · RGB</div>
+          <div class="product-price">₹9,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Corsair Vengeance DDR5" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.gskill.com/img/pro/F5-6000J3038F16GX2-TZ5RK-600.jpg" alt="G.Skill Trident Z5" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-cpu-stock.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">G.Skill</div>
+          <div class="product-name">Trident Z5 RGB 32GB</div>
+          <div class="product-spec">2×16GB · 6000MHz · CL30 · DDR5</div>
+          <div class="product-price">₹11,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: G.Skill Trident Z5" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.kingston.com/dataSheets/KF556C40BB-32_en.jpg" alt="Kingston Fury" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-amd-ryzen.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Kingston</div>
+          <div class="product-name">Fury Beast DDR5 32GB</div>
+          <div class="product-spec">2×16GB · 5200MHz · CL40</div>
+          <div class="product-price">₹8,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Kingston Fury Beast DDR5" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="EVM DDR4" style="width:100%;height:180px;object-fit:cover;display:block;object-position:right bottom;">
+        <div class="product-body">
+          <div class="product-brand">EVM</div>
+          <div class="product-name">DDR4 8GB / 16GB</div>
+          <div class="product-spec">3200MHz · Budget · Office & Home</div>
+          <div class="product-price">From ₹1,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: EVM DDR4 RAM" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CABINETS -->
+    <div id="tab-cabinets" class="tab-content">
+      <div class="product-card">
+        <img src="https://www.lianli.com/wp-content/uploads/2022/09/O11DEvoRGB_B_02.png" alt="Lian Li O11 Dynamic" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Lian Li</div>
+          <div class="product-name">O11 Dynamic EVO RGB</div>
+          <div class="product-spec">Mid Tower · Tempered Glass · ATX/E-ATX</div>
+          <div class="product-price">₹14,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Lian Li O11 Dynamic EVO" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zebronics.com/wp-content/uploads/zeb-opus1-b.jpg" alt="Zebronics Cabinet" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Zebronics</div>
+          <div class="product-name">Zeb-Opus Gaming Cabinet</div>
+          <div class="product-spec">Mid Tower · RGB · Tempered Glass · ATX</div>
+          <div class="product-price">₹3,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Zebronics Opus Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/d91a3893-9aab-4cc9-be02-cbee4dd61e48/v1/img/kv/kv.png" alt="ASUS TUF Gaming Case" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS TUF</div>
+          <div class="product-name">TUF Gaming GT501 Case</div>
+          <div class="product-spec">Full Tower · ARGB · E-ATX Support</div>
+          <div class="product-price">₹8,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS TUF GT501 Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="Antec Cabinet" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">Antec / Ant Esports</div>
+          <div class="product-name">ICE-Series Gaming Cabinet</div>
+          <div class="product-spec">Mid Tower · RGB Fans · Mesh Front</div>
+          <div class="product-price">From ₹2,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Ant Esports Cabinet" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONITORS -->
+    <div id="tab-monitors" class="tab-content">
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/40dc0283-e9e6-4ce8-956c-4c3aef6e43f3/v1/img/kv/kv.png" alt="ASUS ROG Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS ROG</div>
+          <div class="product-name">ROG Swift 27" 165Hz IPS</div>
+          <div class="product-spec">27" · 1440p · 165Hz · 1ms · G-Sync</div>
+          <div class="product-price">₹28,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS ROG Swift Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://asset.msi.com/resize/image/global/product/product_1680068597b33cb6b2f77fb3c7f6baafb8c0eb4b.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="MSI Gaming Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">MSI</div>
+          <div class="product-name">Optix G27C6P 27" Curved</div>
+          <div class="product-spec">27" · FHD · 170Hz · VA Panel · FreeSync</div>
+          <div class="product-price">₹18,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: MSI Optix G27C6P Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.lg.com/us/images/monitors/md08003372/gallery/LG-Monitor-27UK850-W-Front-View-D-1.jpg" alt="LG 4K Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">LG</div>
+          <div class="product-name">UltraFine 27" 4K USB-C</div>
+          <div class="product-spec">27" · 4K UHD · IPS · USB-C · HDR400</div>
+          <div class="product-price">₹32,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: LG 4K Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zebronics.com/wp-content/uploads/ZEB-A24FHD-01.jpg" alt="Zebronics Monitor" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Zebronics</div>
+          <div class="product-name">ZEB-A24FHD 24" IPS</div>
+          <div class="product-spec">24" · FHD · 75Hz · IPS · HDMI</div>
+          <div class="product-price">₹7,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Zebronics 24 inch Monitor" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COOLING -->
+    <div id="tab-cooling" class="tab-content">
+      <div class="product-card">
+        <img src="img-liquid-cooler.jpg" alt="DeepCool LM360" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">DeepCool</div>
+          <div class="product-name">LM360 ARGB 360mm AIO</div>
+          <div class="product-spec">360mm · ARGB Fans · LCD Display · Anti-Leak</div>
+          <div class="product-price">₹8,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: DeepCool LM360" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img-build-green.jpg" alt="Liquid Cooled Build" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="product-body">
+          <div class="product-brand">DeepCool</div>
+          <div class="product-name">AK620 Dual Tower Air Cooler</div>
+          <div class="product-spec">Dual Tower · 260W TDP · 120mm Fans</div>
+          <div class="product-price">₹4,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: DeepCool AK620" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/fc5e3bf1-fdb9-4f59-b797-1e4a9299765d/v1/img/kv/kv.png" alt="ASUS ROG Strix LC" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-liquid-cooler.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS ROG</div>
+          <div class="product-name">ROG Strix LC 360 ARGB</div>
+          <div class="product-spec">360mm · ARGB · ROG Ecosystem</div>
+          <div class="product-price">₹12,000</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS ROG Strix LC 360" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORAGE -->
+    <div id="tab-storage" class="tab-content">
+      <div class="product-card">
+        <img src="img-shop-products.jpg" alt="Crucial SSD" style="width:100%;height:180px;object-fit:cover;display:block;object-position:bottom left;">
+        <div class="product-body">
+          <div class="product-brand">Crucial</div>
+          <div class="product-name">E100 480GB NVMe SSD</div>
+          <div class="product-spec">PCIe Gen4 · M.2 2280 · 4700MB/s</div>
+          <div class="product-price">₹3,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Crucial E100 SSD" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.samsung.com/us/computing/memory-storage/solid-state-drives/_searchresults/products/980-pro/980-pro-2tb/MZ-V8P2T0B-AM-gallery-1.jpg" alt="Samsung 980 Pro" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Samsung</div>
+          <div class="product-name">980 Pro 1TB NVMe</div>
+          <div class="product-spec">PCIe Gen4 · 7000MB/s · M.2</div>
+          <div class="product-price">₹7,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Samsung 980 Pro 1TB" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.seagate.com/content/dam/seagate/migrated-assets/www-content/product-content/barracuda-fam/barracuda/en-us/images/barracuda-hdd-top-angle-1200x630.jpg" alt="Seagate Barracuda HDD" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Seagate</div>
+          <div class="product-name">Barracuda 2TB HDD</div>
+          <div class="product-spec">3.5" · SATA · 7200RPM · 256MB Cache</div>
+          <div class="product-price">₹4,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Seagate Barracuda 2TB" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.colorfire.com/uploadfile/product/2023/20230915144501.jpg" alt="Colorfire SSD" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-gpu-stock.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">Colorfire</div>
+          <div class="product-name">M.2 NVMe SSD 256GB</div>
+          <div class="product-spec">PCIe · M.2 · Fast Boot · Budget</div>
+          <div class="product-price">₹1,800</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: Colorfire M.2 SSD" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIFI CARDS -->
+    <div id="tab-wifi" class="tab-content">
+      <div class="product-card">
+        <img src="https://static.tp-link.com/upload/product-overview/2022/202207/20220706/Archer_TX3000E(UN)_v2_1.0_Normal_1654591081558c.jpg" alt="TP-Link Archer TX3000E" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-shop-products.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">TP-Link</div>
+          <div class="product-name">Archer TX3000E WiFi 6</div>
+          <div class="product-spec">AX3000 · Bluetooth 5.0 · PCIe</div>
+          <div class="product-price">₹3,200</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: TP-Link Archer TX3000E" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://dlcdnwebimgs.asus.com/files/media/6e08e9a3-a6d3-44bf-90b3-e8a42fa89ece/v1/img/keyfeatures/kv.png" alt="ASUS PCE-AX58BT" style="width:100%;height:180px;object-fit:contain;background:#0d1520;padding:8px;display:block;" onerror="this.src='img-motherboards.jpg';this.style.objectFit='cover'">
+        <div class="product-body">
+          <div class="product-brand">ASUS</div>
+          <div class="product-name">PCE-AX58BT WiFi 6</div>
+          <div class="product-spec">AX3000 · BT 5.0 · MU-MIMO · PCIe</div>
+          <div class="product-price">₹4,500</div>
+          <a href="https://wa.me/919588669350?text=Enquiry: ASUS PCE-AX58BT" class="product-cta" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONNECTIVITY -->
+<!-- CONNECTIVITY -->
+<section id="connectivity">
+  <div class="container">
+    <div class="section-label">Channel Partners</div>
+    <div class="section-title">Connectivity & Telecom</div>
+    <p class="section-sub">Authorised partner for bulk & corporate broadband, DTH, OTT and connected TV solutions across Pune.</p>
+    <div class="connectivity-grid">
+      <div class="conn-card" style="--accent:#00d4ff;">
+        <span class="conn-icon">🌐</span>
+        <div class="conn-title">Broadband / WiFi</div>
+        <div class="conn-desc">High-speed fiber for offices, co-working & bulk residential</div>
+        <div class="badge-wrap">
+          <span class="badge b-orange">ACT</span>
+          <span class="badge b-blue">Tata Fiber</span>
+          <span class="badge b-green">Jio Fiber</span>
+          <span class="badge b-cyan">Airtel</span>
+        </div>
+      </div>
+      <div class="conn-card" style="--accent:#a78bfa;">
+        <span class="conn-icon">📡</span>
+        <div class="conn-title">DTH / Cable</div>
+        <div class="conn-desc">Bulk DTH for hotels, hospitals, housing societies</div>
+        <div class="badge-wrap">
+          <span class="badge b-blue">Tata Play</span>
+          <span class="badge b-purple">DishTV</span>
+          <span class="badge b-yellow">Sun Network</span>
+        </div>
+      </div>
+      <div class="conn-card" style="--accent:#f59e0b;">
+        <span class="conn-icon">📺</span>
+        <div class="conn-title">OTT Bundling</div>
+        <div class="conn-desc">Corporate employee perks & hospitality OTT bundles</div>
+        <div class="badge-wrap">
+          <span class="badge b-cyan">Netflix</span>
+          <span class="badge b-blue">Prime</span>
+          <span class="badge b-yellow">Hotstar</span>
+        </div>
+      </div>
+      <div class="conn-card" style="--accent:#4ade80;">
+        <span class="conn-icon">🖥️</span>
+        <div class="conn-title">Connected TVs</div>
+        <div class="conn-desc">Smart TV setup, IPTV & digital signage for offices</div>
+        <div class="badge-wrap">
+          <span class="badge b-green">IPTV</span>
+          <span class="badge b-cyan">Signage</span>
+          <span class="badge b-blue">Smart TV</span>
+        </div>
+      </div>
+      <div class="conn-card" style="--accent:#4aa8ff;">
+        <span class="conn-icon">📶</span>
+        <div class="conn-title">WiFi Networking</div>
+        <div class="conn-desc">Mesh networks, office WiFi infrastructure & optimization</div>
+        <div class="badge-wrap">
+          <span class="badge b-cyan">Mesh WiFi</span>
+          <span class="badge b-blue">Enterprise</span>
+        </div>
+      </div>
+      <div class="conn-card" style="--accent:#00d4ff;">
+        <span class="conn-icon">🏢</span>
+        <div class="conn-title">Corporate & Bulk</div>
+        <div class="conn-desc">Multi-seat packages, AMC contracts, managed connectivity</div>
+        <div class="badge-wrap">
+          <span class="badge b-cyan">Bulk Deals</span>
+          <span class="badge b-green">AMC</span>
+        </div>
+      </div>
+    </div>
+    <div class="partner-strip" style="align-items:center;">
+      <span class="partner-label">Our Partners</span>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://www.actcorp.in/images/act-logo.png" alt="ACT Fibernet" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#ff6b35;">ACT Fibernet</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Airtel_logo_2010.svg/200px-Airtel_logo_2010.svg.png" alt="Airtel" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#e40000;">Airtel</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Jio_logo.svg/200px-Jio_logo.svg.png" alt="Jio Fiber" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#0033a0;">Jio Fiber</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tata_Play_logo.svg/200px-Tata_Play_logo.svg.png" alt="Tata Play" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#00a3e0;">Tata Play</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Dish_TV_Logo.svg/200px-Dish_TV_Logo.svg.png" alt="DishTV" style="height:28px;object-fit:contain;" onerror="this.style.display='none'">
+          <span style="font-size:13px;font-weight:600;color:#a78bfa;">DishTV</span>
+        </div>
+        <div style="background:#0d1520;border:1px solid #1a2d42;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:13px;font-weight:600;color:#f59e0b;">☀️ Sun Network</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- GALLERY -->
+<section id="gallery" style="background:#060a10;">
+  <div class="container">
+    <div class="section-label">Real Stock. Real Builds.</div>
+    <div class="section-title">From Our Store</div>
+    <p class="section-sub">Genuine components, expert builds — straight from our Hinjewadi & Baner showrooms.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-rtx5070.jpg" alt="RTX 5070 Build" style="width:100%;height:240px;object-fit:cover;display:block;transition:transform 0.3s;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Latest Build</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">PNY GeForce RTX 5070 — Gaming Rig</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-build-green.jpg" alt="Custom Build Inside" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Custom Build</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">MSI + DeepCool Liquid Cooled System</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-motherboards.jpg" alt="Motherboard Stock" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">MSI, ASUS, Gigabyte Motherboards</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-cpu-stock.jpg" alt="Intel & AMD CPUs" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">Intel Core i3/i5/i7 & AMD Ryzen CPUs</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-gpu-stock.jpg" alt="GPU Stock" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">In Stock</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">AMD Radeon RX 6500 XT & More GPUs</div>
+        </div>
+      </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid #1a2d42;position:relative;">
+        <img src="img-liquid-cooler.jpg" alt="Liquid Cooling" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,10,16,0.95));padding:16px;">
+          <div style="font-family:Orbitron,monospace;font-size:12px;color:#00d4ff;">Premium Cooling</div>
+          <div style="font-size:14px;color:#fff;font-weight:600;">DeepCool LM360 ARGB Liquid Cooler</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-bg">
+  <div class="container">
+    <div class="section-label">Customer Reviews</div>
+    <div class="section-title">What Pune Says</div>
+    <div class="rating-summary">
+      <div class="rating-big">4.9</div>
+      <div>
+        <div class="rating-stars-big">★★★★★</div>
+        <div class="rating-info">Based on Google Reviews<br/>Hinjewadi & Baner branches</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Got my custom gaming PC built here — absolute beast of a machine. Team was super knowledgeable, no upselling, just honest advice. Delivered on time."</div>
+        <div class="review-author">Rahul M.</div>
+        <div class="review-role">Gamer, Hinjewadi</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Set up our entire office IT infrastructure including networking and interactive panels. Professional team, great AMC support. Highly recommend for corporates."</div>
+        <div class="review-author">Priya S.</div>
+        <div class="review-role">IT Manager, Baner</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Trading PC is perfect — dual monitor setup, super fast, no lag during market hours. The Cyberflix team understood exactly what a trader needs."</div>
+        <div class="review-author">Vikram D.</div>
+        <div class="review-role">Stock Trader, Wakad</div>
+      </div>
+    </div>
+    <a href="https://share.google/SlEzwEVr6GVWjaTXf" target="_blank" class="btn-outline">Leave a Google Review ↗</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <!-- COL 1 -->
+    <div>
+      <a href="#" class="footer-logo-wrap">
+        <svg width="32" height="32" viewBox="0 0 160 160" fill="none">
+          <rect width="160" height="160" fill="#060a10"/>
+          <polygon points="80,22 130,51 130,109 80,138 30,109 30,51" stroke="#1a8aaa" stroke-width="1.5" fill="none" opacity="0.85"/>
+          <line x1="80" y1="22" x2="80" y2="138" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+          <line x1="130" y1="51" x2="30" y2="109" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+          <line x1="130" y1="109" x2="30" y2="51" stroke="#1a8aaa" stroke-width="1" opacity="0.5"/>
+          <circle cx="80"  cy="22"  r="4" fill="#00bfdf"/>
+          <circle cx="130" cy="51"  r="4" fill="#00bfdf"/>
+          <circle cx="130" cy="109" r="4" fill="#00bfdf"/>
+          <circle cx="80"  cy="138" r="4" fill="#00bfdf"/>
+          <circle cx="30"  cy="109" r="4" fill="#00bfdf"/>
+          <circle cx="30"  cy="51"  r="4" fill="#00bfdf"/>
+          <path d="M 110 54 A 38 38 0 1 0 110 106" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <polygon points="108,72 108,88 122,80" fill="#00c8f0"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-cyber" style="font-size:16px">Cyber</span><span class="logo-flix" style="font-size:16px">flix</span>
+          <span class="logo-llp" style="font-size:10px">Systems LLP</span>
+        </div>
+      </a>
+      <p class="footer-tagline">Pune's most trusted custom PC builder and IT solutions partner. Powering homes, offices and enterprises since 2016.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/cyberflix_systems_llp/" class="social-btn" title="Instagram" target="_blank">📸</a>
+        <a href="#" class="social-btn" title="LinkedIn">💼</a>
+        <a href="#" class="social-btn" title="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <!-- COL 2 -->
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#connectivity">Channel Partners</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- COL 3 — HINJEWADI -->
+    <div>
+      <div class="footer-col-title">Hinjewadi Branch</div>
+      <div class="branch-name">Phase 1, Hinjewadi</div>
+      <div class="branch-addr">
+        Hinjewadi Phase 1,<br/>
+        Pune, Maharashtra 411057<br/>
+        📞 +91 95886 69350
+      </div>
+      <a href="https://wa.me/919588669350?text=Hi, I am enquiring from Hinjewadi" class="wa-btn" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://maps.google.com/?q=Hinjewadi+Phase+1+Pune" class="footer-links" target="_blank" style="font-size:13px;color:var(--cyan);text-decoration:none;">📍 View on Maps</a>
+    </div>
+
+    <!-- COL 4 — BANER -->
+    <div>
+      <div class="footer-col-title">Baner Branch</div>
+      <div class="branch-name">Baner, Pune</div>
+      <div class="branch-addr">
+        Baner Road,<br/>
+        Pune, Maharashtra 411045<br/>
+        📞 +91 82372 24346
+      </div>
+      <a href="https://wa.me/918237224346?text=Hi, I am enquiring from Baner" class="wa-btn" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://maps.google.com/?q=Baner+Pune" target="_blank" style="font-size:13px;color:var(--cyan);text-decoration:none;">📍 View on Maps</a>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="height:1px;background:var(--border);"></div>
+    <div class="footer-bottom" style="padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+      <div class="footer-copy">© 2025 Cyberflix Systems LLP · All Rights Reserved</div>
+      <div class="footer-policy">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919588669350?text=Hi Cyberflix, I need help!" class="wa-float" target="_blank">
+  <span class="wa-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </span>
+  <span>Chat with us</span>
+</a>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '64px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = '#0d1520';
+    links.style.padding = '20px';
+    links.style.borderBottom = '1px solid #1a2d42';
+  }
+</script>
+</body>
+</html>
